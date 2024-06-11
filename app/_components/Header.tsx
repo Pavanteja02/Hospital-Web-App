@@ -9,6 +9,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
+
 
 
 function Header() {
@@ -34,6 +36,7 @@ function Header() {
   useEffect(()=>{
     console.log(user?.picture);
 },[user])
+
 
   return (
     <div className='flex items-center justify-between p-4 shadow-md'>
