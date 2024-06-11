@@ -3,6 +3,7 @@ import { GraduationCap, MapPin } from 'lucide-react'
 import { Graduate } from 'next/font/google'
 import Image from 'next/image'
 import React from 'react'
+import BookAppointment from './BookAppointment'
 
 function DoctorDetails({doctor}:any) {
   return (
@@ -28,7 +29,8 @@ function DoctorDetails({doctor}:any) {
                 <h2 className='text-[10px] bg-blue-100 p-1 rounded-full
                         px-2 text-primary'>{doctor.attributes?.categories.data[0].attributes?.Name}</h2>
 
-                 <Button className='mt-3 rounded-full'>Book Appointment</Button>       
+                    
+                 <BookAppointment doctor={doctor}/>    
           </div>
           
         </div>
