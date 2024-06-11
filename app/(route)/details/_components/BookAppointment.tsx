@@ -64,6 +64,9 @@ function BookAppointment({doctor}:any) {
         GlobalApi.bookAppointment(data).then((resp: any)=>{
             console.log(resp);
             if(resp){
+                GlobalApi.sendEmail(data).then((resp:any)=>{
+                    console.log(resp);
+                })
                 toast("Booking Confirmation sent on Email")
             }
         })

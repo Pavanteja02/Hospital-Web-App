@@ -20,7 +20,7 @@ import {
     ? `https://${process.env.VERCEL_URL}`
     : "http://localhost:3000";
   
-  export const KoalaWelcomeEmail = ({
+  export const EmailTemplate = ({
     userFirstname,
   }: KoalaWelcomeEmailProps) => (
     <Html>
@@ -61,11 +61,11 @@ import {
     </Html>
   );
   
-  KoalaWelcomeEmail.PreviewProps = {
+  EmailTemplate.PreviewProps = {
     userFirstname: "Alan",
   } as KoalaWelcomeEmailProps;
   
-  export default KoalaWelcomeEmail;
+
   
   const main = {
     backgroundColor: "#ffffff",
@@ -112,3 +112,4 @@ import {
     fontSize: "12px",
   };
   
+  export default EmailTemplate;
