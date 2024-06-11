@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 function DoctorList({doctorList,heading='Popular Doctors'}:any) {
@@ -9,7 +10,7 @@ function DoctorList({doctorList,heading='Popular Doctors'}:any) {
                 gap-7 mt-4
                 lg:grid-cols-4'>
             {doctorList.length>0?doctorList.map((doctor:any,index:any)=>(
-                <div className='border-[1px] rounded-lg p-3
+                <div key={index} className='border-[1px] rounded-lg p-3
                 cursor-pointer hover:border-primary hover:shadow-lg
                 transition-all ease-in-out'
                 key={index}>
@@ -25,10 +26,12 @@ function DoctorList({doctorList,heading='Popular Doctors'}:any) {
                         <h2 className='text-primary text-sm'>{doctor.attributes?.Years_of_Experience} years</h2>
                         <h2 className='text-gray-500 text-sm'>{doctor.attributes?.Address}</h2>
 
+                        {/* <Link href={'/details/'+doctor?.id} className='w-full'> */}
                         <h2 className='p-2 px-3 border-[1px] border-primary
                         text-primary rounded-full w-full text-center
                         text-[11px] mt-2 cursor-pointer hover:bg-primary
                         hover:text-white'>Book Now</h2>
+                        {/* </Link> */}
                     </div>
                 </div>
 
