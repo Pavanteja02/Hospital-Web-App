@@ -41,7 +41,7 @@ function CategoryList() {
   <CommandList className='overflow-visible'>
     <CommandEmpty>No results found.</CommandEmpty>
     <CommandGroup heading="Suggestions">
-      {categoryList && categoryList.map((item,index)=>(
+      {categoryList && categoryList.map((item:any,index)=>(
         <CommandItem key={index}>
           <Link href={'/search/'+item?.attributes?.Name}
           className={`p-2 flex gap-2 

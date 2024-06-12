@@ -56,10 +56,14 @@ function Header() {
       {user?
       
       <Popover>
-        <PopoverTrigger><Image src={user?.picture} alt='profile-image'
+        <PopoverTrigger>
+        {user?.picture && (
+          <Image src={user?.picture} alt='profile-image'
       width={50} height={50}
       className='rounded-full'
-      /></PopoverTrigger>
+      />
+        )}
+      </PopoverTrigger>
         <PopoverContent className='w-44'>
           <ul className='flex flex-col gap-2'>
           <li className='cursor-pointer hover:bg-slate-100 p-2 rounded-md'>Profile</li>
