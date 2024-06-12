@@ -38,7 +38,7 @@ function DoctorList({doctorList,heading='Popular Doctors'}:any) {
             ))
         :
         [1,2,3,4,5,6].map((item,index)=>(
-        <div className='h-[220px] bg-slate-200 w-full
+        <div  key={index} className='h-[220px] bg-slate-200 w-full
         rounded-lg animate-pulse'>
 
         </div>

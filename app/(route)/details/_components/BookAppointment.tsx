@@ -107,7 +107,7 @@ function BookAppointment({doctor}:any) {
                 </h2>
                 <div className='grid grid-cols-3 gap-2 border rounded-lg p-5'>
                     {timeSlot?.map((item:any,index:any)=>(
-                        <h2 
+                        <h2   key={index} 
                         onClick={()=>setSelectedTimeSlot(item.time)}
                         className={`p-2 border cursor-pointer
                          text-center hover:bg-primary hover:text-white 
