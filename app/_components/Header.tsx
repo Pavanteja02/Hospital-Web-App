@@ -46,8 +46,8 @@ function Header() {
       />
       <ul className='md:flex gap-8 hidden'>
         {Menu.map((item,index)=>(
-          <Link key={index} href={item.path}>
-          <li  key={index}  className='hover:text-primary cursor-pointer hover:scale-110
+          <Link key={item.id} href={item.path}>
+          <li  key={item.id}  className='hover:text-primary cursor-pointer hover:scale-110
           transition-all ease-in-out'>{item.name}</li>
           </Link>
         ))}
