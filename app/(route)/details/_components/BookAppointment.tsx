@@ -15,6 +15,7 @@ import { CalendarDays, Clock } from 'lucide-react'
 import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
 import GlobalApi from '@/app/_utils/GlobalApi'
 import { toast } from 'sonner'
+import { InlineWidget } from "react-calendly";
 
   
 
@@ -82,44 +83,9 @@ function BookAppointment({doctor}:any) {
     <Button className='mt-3 rounded-full'>Book Appointment</Button>
     </DialogTrigger>
   <DialogContent>
-    <DialogHeader>
-      <DialogTitle>Book Appointment</DialogTitle>
-      <DialogDescription>
-       <div>
-        <div className='grid grid-cols-1 md:grid-cols-2 mt-5'>
-            <div className='flex flex-col gap-3 items-baseline'>
-                <h2 className='flex gap-2 items-center'>
-                <CalendarDays className='text-primary h-5 w-5'></CalendarDays>
-                Select Date
-                </h2>
-            <Calendar
-            mode="single"
-            selected={date}
-            onSelect={setDate}
-            disabled={isPastDay}
-            className="rounded-md border"
-            />
-            </div>
-            <div className='mt-3 md:mt-0'>
-                <h2 className='flex gap-2 items-center mb-3'>
-                    <Clock className='text-primary h-5 w-5'></Clock>
-                    Select Time Slot
-                </h2>
-                <div className='grid grid-cols-3 gap-2 border rounded-lg p-5'>
-                    {timeSlot?.map((item:any,index:any)=>(
-                        <h2   key={index} 
-                        onClick={()=>setSelectedTimeSlot(item.time)}
-                        className={`p-2 border cursor-pointer
-                         text-center hover:bg-primary hover:text-white 
-                         rounded-full
-                         ${item.time==selectedTimeSlot&&'bg-primary text-white'}`}>{item.time}</h2>
-                    ))}
-                </div>
-            </div>
-        </div>
-       </div>
-      </DialogDescription>
-    </DialogHeader>
+    <div className="App">
+      <InlineWidget url="https://calendly.com/naidupavanteja" />
+    </div>
     <DialogFooter className="sm:justify-end">
           <DialogClose asChild>
             <div>
@@ -128,14 +94,14 @@ function BookAppointment({doctor}:any) {
               Close
             </Button>
 
-            <Button type="button" disabled={!(date&&selectedTimeSlot)}
+            <Button type="button" 
             onClick={()=>saveBooking()}
             >
               Submit
             </Button>
             </div>
           </DialogClose>
-        </DialogFooter>
+        </DialogFooter> 
   </DialogContent>
 </Dialog>
 
