@@ -40,15 +40,16 @@ function Header() {
 
   return (
     <div className='flex items-center justify-between p-4 shadow-md'>
-      <div className='flex items-center gap-10'>
+      <div className='flex items-center gap-4'>
       <Image src='/logo.svg' alt='logo'
-      width={180} height={80}
+      width={40} height={40}
       />
+      <h2 className="text-2xl font-bold">Docpoint</h2>
       <ul className='md:flex gap-8 hidden'>
         {Menu.map((item,index)=>(
           <Link key={item.id} href={item.path}>
           <li  key={item.id}  className='hover:text-primary cursor-pointer hover:scale-110
-          transition-all ease-in-out'>{item.name}</li>
+          transition-all ease-in-out '>{item.name}</li>
           </Link>
         ))}
       </ul>

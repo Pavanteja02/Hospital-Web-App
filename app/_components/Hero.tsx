@@ -28,9 +28,11 @@ function Hero() {
              </h2>
 
         <p className="mt-4 text-gray-600">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic atque tenetur quis
-          eius quos ea neque sunt, accusantium soluta minus veniam tempora deserunt? Molestiae eius
-          quidem quam repellat.
+        Discover top-rated healthcare providers and easily schedule appointments online. Take control of your health journey today.
+        Effortlessly manage your appointments and medical records in one secure place.
+        Experience personalized care with our trusted network of healthcare professionals.
+
+
         </p>
 
         <Button className='mt-10'>Explore Now</Button>

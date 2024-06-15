@@ -5,15 +5,17 @@ function Footer() {
   return (
         <footer className="bg-gray-100">
   <div className="mx-auto max-w-5xl justify-center text-center flex flex-col items-center px-4 py-16 sm:px-6 lg:px-8">
+  <div className="flex items-center justify-center gap-4">
 <Image src='/logo.svg'
 alt='logo'
-width={200}
-height={100}
+width={50}
+height={50}
 />
+<h2 className="text-2xl font-bold">Docpoint</h2>
+</div>
 
     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa cum
-      itaque neque.
+    Copyright @ 2022 Docpoint, powered by Meshwork Technology Private Limited. All rights reserved.
     </p>
 
     <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
